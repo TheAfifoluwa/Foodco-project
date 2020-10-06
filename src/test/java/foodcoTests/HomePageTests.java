@@ -3,12 +3,14 @@ package foodcoTests;
 import org.testng.annotations.Test;
 import pageObjects.*;
 import setUp.SetUps;
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 public class HomePageTests extends SetUps {
     @Test (priority = 1)
     public void testHome(){
         //assert pop up window
-        homePage.getPopupHeading();
+        assertEquals(homePage.getPopupHeading(),"PLEASE SELECT A DELIVERY AREA");
         //click on lagos
         homePage.selectLagos();
         //login into dashboard
@@ -21,9 +23,9 @@ public class HomePageTests extends SetUps {
         //select subcategory- Makeup
         MakeupPage makeupPage=healthBPage.clickMakeUp();
         //Assert 3 items in the subcategory
-        makeupPage.getItem1();
-        makeupPage.getItem2();
-        makeupPage.getItem3();
+        assertTrue(makeupPage.getItem1());
+        assertTrue(makeupPage.getItem2());
+        assertTrue(makeupPage.getItem3());
         //click on logout
         makeupPage.clickLogout();
         //confirm logout

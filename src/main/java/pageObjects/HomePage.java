@@ -11,8 +11,8 @@ public class HomePage {
         this.driver=driver;
     }
     private By popupHeading = By.xpath("/html/body/div[6]/div[2]/h3");
-    public void getPopupHeading(){
-        assertEquals(driver.findElement(popupHeading).getText(),"PLEASE SELECT A DELIVERY AREA","text is incorrect");
+    public String getPopupHeading(){
+      return driver.findElement(popupHeading).getText();
     }
     //select lagos as delivery area
     private By lagos=By.xpath("/html/body/div[6]/div[2]/div[1]/form/label[2]");
