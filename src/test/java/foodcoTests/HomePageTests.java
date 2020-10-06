@@ -13,8 +13,8 @@ public class HomePageTests extends SetUps {
         homePage.selectLagos();
         //login into dashboard
         LoginPage loginPage= homePage.clickMyaccount();
-        loginPage.enterUsername("");
-        loginPage.enterPassword("");
+        loginPage.enterUsername("folu@mailinator.com");
+        loginPage.enterPassword("firstadmin@123");
         DashboardPage dashboardPage= loginPage.clickLoginBtn();
         //select category- health and beauty
         HealthBPage healthBPage= dashboardPage.clickHbBtn();
