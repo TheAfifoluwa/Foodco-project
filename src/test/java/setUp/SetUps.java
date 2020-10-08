@@ -16,8 +16,8 @@ public class SetUps {
     protected HomePage homePage;
     protected LoginPage loginPage;
     protected DashboardPage dashboardPage;
-    protected HealthBPage healthBPage;
-    protected MakeupPage makeupPage;
+    protected HouseholdPage householdPage;
+    protected BathBedPage bathBedPage;
     @BeforeTest
     public void setUp(){
         System.setProperty("webdriver.chrome.driver","resources/chromedriver.exe");

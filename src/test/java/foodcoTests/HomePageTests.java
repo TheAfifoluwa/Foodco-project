@@ -11,7 +11,7 @@ public class HomePageTests extends SetUps {
     public void testHome(){
         //assert pop up window
         assertEquals(homePage.getPopupHeading(),"PLEASE SELECT A DELIVERY AREA","Pop up heading incorrect");
-        //asert lagos
+        //assert lagos
         assertTrue(homePage.getLagosText());
         System.out.println("Location and Lagos assertion passed");
         //click on lagos
@@ -21,17 +21,17 @@ public class HomePageTests extends SetUps {
         loginPage.enterUsername("folu@mailinator.com");
         loginPage.enterPassword("firstadmin@123");
         DashboardPage dashboardPage= loginPage.clickLoginBtn();
-        //select category- health and beauty
-        HealthBPage healthBPage= dashboardPage.clickHbBtn();
-        //select subcategory- Makeup
-        MakeupPage makeupPage=healthBPage.clickMakeUp();
+        //select category-household
+        HouseholdPage householdPage= dashboardPage.clickHousehold();
+        //select subcategory- Bath and Bed
+        BathBedPage bathBedPage= householdPage.clickbathBed();
         //Assert 3 items in the subcategory
-        assertTrue(makeupPage.getItem1());
-        assertTrue(makeupPage.getItem2());
-        assertTrue(makeupPage.getItem3());
+        assertTrue(bathBedPage.getItem1());
+        assertTrue(bathBedPage.getItem2());
+        assertTrue(bathBedPage.getItem3());
         System.out.println("Item assertion passed");
         //click on logout
-        makeupPage.clickLogout();
+        bathBedPage.clickLogout();
         //confirm logout
         dashboardPage.confirmLogout();
         //go back to home page and print out "Account logged out. Page URL is https://foodco.ng/"

@@ -11,9 +11,9 @@ public class DashboardPage {
         this.driver=driver;
     }
     //click on health and beauty category
-    public HealthBPage clickHbBtn(){
-        driver.findElement(By.xpath("//*[@id=\"nav-menu-item-3344\"]/a")).click();
-        return new HealthBPage(driver);
+    public HouseholdPage clickHousehold(){
+        driver.findElement(By.xpath("//*[@id=\"nav-menu-item-3339\"]/a")).click();
+        return new HouseholdPage(driver);
     }
     //confirm logout
     public LoginPage confirmLogout(){
