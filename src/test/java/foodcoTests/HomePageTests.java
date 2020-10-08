@@ -7,10 +7,13 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 public class HomePageTests extends SetUps {
-    @Test (priority = 1)
+    @Test
     public void testHome(){
         //assert pop up window
-        assertEquals(homePage.getPopupHeading(),"PLEASE SELECT A DELIVERY AREA");
+        assertEquals(homePage.getPopupHeading(),"PLEASE SELECT A DELIVERY AREA","Pop up heading incorrect");
+        //asert lagos
+        assertTrue(homePage.getLagosText());
+        System.out.println("Location and Lagos assertion passed");
         //click on lagos
         homePage.selectLagos();
         //login into dashboard
@@ -26,6 +29,7 @@ public class HomePageTests extends SetUps {
         assertTrue(makeupPage.getItem1());
         assertTrue(makeupPage.getItem2());
         assertTrue(makeupPage.getItem3());
+        System.out.println("Item assertion passed");
         //click on logout
         makeupPage.clickLogout();
         //confirm logout
