@@ -8,15 +8,22 @@ public class LoginPage {
     public LoginPage(WebDriver driver) {
         this.driver= driver;
     }
-//locate username element
+
+    //locate username element
     private By username= By.xpath("//*[@id=\"username\"]");
+    //enter username
     public void enterUsername(String uName){
         driver.findElement(username).sendKeys(uName);
     }
+
+    //locate password element
     private By password= By.xpath("//*[@id=\"password\"]");
+    //enter password
     public void enterPassword(String pass){
         driver.findElement(password).sendKeys(pass);
     }
+
+    //click on login button
     public DashboardPage clickLoginBtn(){
         driver.findElement(By.xpath("//*[@id=\"customer_login\"]/div[1]/form/p[4]/button")).click();
         //return dashboard page
@@ -25,7 +32,7 @@ public class LoginPage {
     //go back to home page
     public HomePage clickHome(){
         driver.findElement(By.xpath("/html/body/div[2]/section/div/div/div/div[2]/ul/li[1]/a")).click();
-        System.out.println("Account logged out, page URL is https://foodco.ng");
+        System.out.println("Account logged out, page URL is https://foodco.ng/");
         return new HomePage(driver);
     }
 }

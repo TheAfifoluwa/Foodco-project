@@ -6,6 +6,10 @@
             <class name="foodcoTests.HomePageTests">
                 <methods>
                     <include name="testHome"/>
+                    <include name="testLogin"/>
+                    <include name="testCatNSubcat"/>
+                    <include name="testItems"/>
+                    <include name="testLogout"/>
                 </methods>
             </class>
         </classes>

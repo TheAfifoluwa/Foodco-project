@@ -10,21 +10,24 @@ public class HomePage {
     public HomePage(WebDriver driver) {
         this.driver=driver;
     }
+
     //get pop up heading
     private By popupHeading = By.xpath("/html/body/div[6]/div[2]/h3");
     public String getPopupHeading(){
       return driver.findElement(popupHeading).getText();
     }
-    //get lagos
 
+    //get lagos
     public boolean getLagosText(){
         return driver.findElement(lagos).isDisplayed();
     }
+
     //select lagos as delivery area
     private By lagos=By.xpath("/html/body/div[6]/div[2]/div[1]/form/label[2]");
     public void selectLagos(){
         driver.findElement(lagos).click();
     }
+
     //get login page
     private By myAccount=By.xpath("//*[@id=\"nav-menu-item-20267\"]/a");
        public LoginPage clickMyaccount(){
